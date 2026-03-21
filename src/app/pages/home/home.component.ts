@@ -5,10 +5,9 @@ import { BlurPasswordComponent } from '../../components/blur-password/blur-passw
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [VideoCardComponent, BlurPasswordComponent, CommonModule],
-  template: `
+    selector: 'app-home',
+    imports: [VideoCardComponent, BlurPasswordComponent, CommonModule],
+    template: `
     <app-blur-password *ngIf="!unlocked" (unlockedEvent)="unlocked = true"></app-blur-password>
     <div [class.blurred]="!unlocked">
       <section class="hero">
@@ -25,7 +24,7 @@ import { CommonModule } from '@angular/common';
       </section>
     </div>
   `,
-  styles: `
+    styles: `
     .hero {
       text-align: center;
       padding: 2rem 1rem;
@@ -48,7 +47,7 @@ import { CommonModule } from '@angular/common';
       transition: all 0.3s ease;
     }
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent {
   #videoService = inject(VideoService);
