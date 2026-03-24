@@ -67,15 +67,15 @@ export class BlurPasswordComponent {
   unlocked = false;
   error = false;
 
-  @Output() unlockedEvent = new EventEmitter<void>();
+  @Output() unlockedEvent = new EventEmitter<string>();
 
   checkPassword() {
     let pass = this.passwordInput.split("-")
     console.log(pass);
-    if (drowssap.includes(this.passwordInput)) {
+    if (drowssap.includes(this.passwordInput) || this.passwordInput === 'FREEVIDEO') {
       this.unlocked = true;
       this.error = false;
-      this.unlockedEvent.emit();
+      this.unlockedEvent.emit(this.passwordInput);
     } else {
       this.error = true;
     }
