@@ -4,10 +4,12 @@ import { CommonModule } from '@angular/common';
 export interface ProductCard {
   title: string;
   price: string;
+  description?: string;
   rating: number;
   reviews: number;
   image?: string;
   url?: string;
+  ctaText?: string;
 }
 
 @Component({
@@ -27,7 +29,11 @@ export interface ProductCard {
               <span class="stars">{{ '★'.repeat(p.rating) }}</span>
               <span class="reviews">({{ p.reviews }})</span>
             </div>
+            <p class="desc">{{ p.description }}</p>
             <div class="price">{{ p.price }}</div>
+            <div class="card-cta">
+              <a class="btn primary" [href]="p.url" target="_blank" rel="noopener">{{ p.ctaText || 'Buy Now' }}</a>
+            </div>
           </div>
         </article>
       </a>
@@ -89,6 +95,9 @@ export interface ProductCard {
       font-weight: 700;
       margin-top: 0.5rem;
     }
+    .product-card .desc { color: #444; font-size:0.95rem; margin-top:0.5rem }
+    .card-cta { margin-top:0.75rem }
+    .card-cta .btn { padding:0.5rem 0.8rem; border-radius:6px; text-decoration:none; background:var(--primary); color:var(--white) }
   `],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
