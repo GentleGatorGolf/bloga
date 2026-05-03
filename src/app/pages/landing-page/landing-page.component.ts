@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { ProductCardComponent } from '../../components/product-card/product-card.component';
 import { TrajectoryDisplayComponent } from '../../components/trajectory-display/trajectory-display.component';
 import { DistanceOptimizerComponent } from '../../components/distance-optimizer/distance-optimizer.component';
+import { BannerComponent } from '../../components/banner/banner.component';
+import { HeaderComponent } from '../../components/header/header.component';
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [CommonModule, ProductCardComponent, TrajectoryDisplayComponent, DistanceOptimizerComponent],
+  imports: [CommonModule, ProductCardComponent, TrajectoryDisplayComponent, DistanceOptimizerComponent, BannerComponent, HeaderComponent],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush

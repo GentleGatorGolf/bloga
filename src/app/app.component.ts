@@ -1,15 +1,11 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { BannerComponent } from './components/banner/banner.component';
 
 @Component({
     selector: 'app-root',
-    imports: [RouterOutlet, HeaderComponent, BannerComponent, FooterComponent],
+    imports: [RouterOutlet, FooterComponent],
     template: `
-    <app-header />
-    <app-banner />
     <main>
       <router-outlet />
     </main>
