@@ -124,6 +124,41 @@
 
   </div>
 
+  <!-- REVIEWS -->
+  <section class="reviews">
+    <h2><span class="reviews-label">THE BUZZ ON</span> <span class="reviews-accent"> DRIVE ALIGN</span></h2>
+
+    <div class="stars-summary">
+      <span class="big-stars">★★★★★</span>
+      <span class="big-rating">4.8</span>
+      <span class="big-count">/ 5 · 34 reviews</span>
+    </div>
+    <div class="reviews-grid">
+      @for (review of reviews; track review.author) {
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote">"{{ review.quote }}"</p>
+          <div class="review-author">
+            <span class="author-name">{{ review.author }}</span>
+            <span class="author-date">{{ review.date }}</span>
+          </div>
+        </div>
+      }
+    </div>
+    <a class="btn-primary" href="https://gentlegatorgolf.com/products/drive-align" target="_blank">SEE ALL REVIEWS</a>
+  </section>
+
+  <!-- GUARANTEE -->
+  <section class="guarantee">
+    <div class="guarantee-inner">
+      <div class="guarantee-badge">30</div>
+      <div class="guarantee-text">
+        <h3>30-DAY MONEY BACK GUARANTEE</h3>
+        <p>If you don't add yards within 30 days, send it back for a full refund. No questions asked.</p>
+      </div>
+    </div>
+  </section>
+
   <footer class="blog-footer">
     <p>&copy; 2026 Gentle Gator LLC. All Rights Reserved.</p>
   </footer>
