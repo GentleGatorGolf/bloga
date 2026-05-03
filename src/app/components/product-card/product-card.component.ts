@@ -67,7 +67,7 @@ export interface ProductCard {
     }
 
     .product-card .media img {
-      max-width: 160px;
+      max-width: 120px;
       height: auto;
       display: block;
     }
