@@ -9,7 +9,7 @@ export const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    component: LandingPageComponent,
+    component: LandingPage2Component,
     title: 'Welcome to Gentle Gator Golf Training'
   },
   {
