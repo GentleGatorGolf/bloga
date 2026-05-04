@@ -266,7 +266,22 @@
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   box-shadow: 0 4px 0 #c29d12;
-  white-space: nowrap;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  .blog-cta {
+    padding: 1.5rem 1rem;
+  }
+  
+  .blog-cta-btn {
+    font-size: 0.95rem;
+    padding: 1rem 0.75rem;
+    white-space: normal;
+    line-height: 1.4;
+  }
 }
 
 .blog-cta-btn:hover {
