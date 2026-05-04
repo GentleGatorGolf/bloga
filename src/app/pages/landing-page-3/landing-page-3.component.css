@@ -109,11 +109,14 @@
 /* ─── Hero image ─── */
 .blog-hero {
   margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .blog-hero img {
-  width: 100%;
-  height: 640px;
+  width: 80%;
+  height: auto;
   object-fit: cover;
   border-radius: 4px;
   display: block;
